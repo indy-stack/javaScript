@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object Property</title>
+  </head>
+
+  <body>
+    <h1>Checking if an object has own property</h1>
+    <p>
+      Output for own property:
+      <span id="hasProperty"></span>
+    </p>
+    <p>
+      Output for not own property:
+      <span id="notOwnProperty"></span>
+    </p>
+    <button onclick="checkproperty()">Check Property</button>
+    <pre>
+    <h2>JS code to evaluate if an object has its own property</h2>
+    
+    function checkproperty(){
+        function Car(make, year){
+            this.make = make;
+            this.year = year;
+        }
+
+        let car1 = new Car("Mazda", "2017");
+        let car2 = new Car("Honda", "2019");
+
+        //checking for existing property
+        result1 = car1.hasOwnProperty("make");
+        //should be true
+        result2 = car2.hasOwnProperty("model");
+        //should be false
+        document.querySelector("#hasProperty").innerHTML = result1;
+        document.querySelector("#notOwnProperty").innerHTML = result2;
+    }
+    </pre>
+
+    <script type="text/javascript">
+      function checkproperty() {
+        function Car(make, year) {
+          this.make = make;
+          this.year = year;
+        }
+
+        let car1 = new Car("Mazda", "2017");
+        let car2 = new Car("Honda", "2019");
+
+        //checking for existing property
+        result1 = car1.hasOwnProperty("make");
+        //should be true
+        result2 = car2.hasOwnProperty("model");
+        //should be false
+        document.querySelector("#hasProperty").innerHTML = result1;
+        document.querySelector("#notOwnProperty").innerHTML = result2;
+      }
+    </script>
+  </body>
+</html>
