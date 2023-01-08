@@ -3,7 +3,10 @@
 const member = {
     name: 'Leo',
     age : 57,
-    'married age': 31
+    'married age': 31,
+    sayHello: function(){
+        console.log('Hello ' + this.name);
+    }
 }
 
 console.log(JSON.stringify(member));
@@ -12,4 +15,5 @@ console.log(JSON.stringify(member));
 
 const ourJSON = JSON.stringify(member);
 const person = JSON.parse(ourJSON);
-console.log(person.name);
+console.log(member.name + " " +  member.age);
+member.sayHello();
